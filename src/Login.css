@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, rgba(44, 62, 80, 0.7), rgba(76, 161, 175, 0.7)), 
+              url('./Login-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-title {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #222;
+  color: #f0f0f0;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #4ca1af;
+  background-color: #333;
+  outline: none;
+}
+
+.login-button {
+  background: #4ca1af;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-button:hover {
+  background: #357a8a;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.login-button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s;
+}
+
+.login-button:hover:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.additional-content {
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.forgot-password, .signup-link {
+  margin: 10px 0;
+}
+
+.forgot-password a, .signup-link a {
+  color: #4ca1af;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.forgot-password a:hover, .signup-link a:hover {
+  text-decoration: underline;
+}
