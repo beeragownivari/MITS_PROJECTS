@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Dashboard from './Dashboard';
-import Home from './Home';
-import Login from './Login';
-import SignUp from './SignUp';
+import Dashboard from './components/Dashboard';
+import Home from './components/Home';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
 import InterviewQuestions from './InterviewQuestions';
-import Communicate from './Communicate';
-import Events from './Events';
-import Resources from './Resources';
+import Communicate from './components/Communicate';
+import Events from './components/Events';
+import Resources from './components/Resources';
 
 const App = () => {
   return (
@@ -21,6 +21,7 @@ const App = () => {
         <Route path="/communicate" element={<Communicate />} />
         <Route path="/events" element={<Events />} />
         <Route path="/resources" element={<Resources />} />
+        
       </Routes>
     </Router>
   );

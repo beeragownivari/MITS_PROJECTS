@@ -1,8 +1,8 @@
 // src/pages/Dashboard.js
 
 import React from 'react';
-import Navbar from './Navbar';
-import './Dashboard.css';
+import Navbar from '../components/Navbar';
+import '../css/Dashboard.css';
 
 const Dashboard = () => {
   return (

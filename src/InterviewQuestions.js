@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './Navbar.js'; // Ensure this file exists
+import Navbar from './components/Navbar.js'; // Ensure this file exists
 
 export default function InterviewQuestions() {
   return (

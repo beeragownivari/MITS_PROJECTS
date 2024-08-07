@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import './Home.css'; // Ensure this file exists
+import '../css/Home.css'; // Ensure this file exists
 import Navbar from './Navbar.js'; // Ensure this file exists
 
 const Home = () => {
