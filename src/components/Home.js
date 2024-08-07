@@ -2,14 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import '../css/Home.css'; // Ensure this file exists
-import Navbar from './Navbar.js'; // Ensure this file exists
+import './Home.css';
+import Navbar from './Navbar.js';
+
+import event1 from './event1.jpeg';
+import event2 from './event2.jpeg';
+import event3 from './event3.jpeg';
 
 const Home = () => {
   return (
     <div className="home-container">
-        <Navbar/>
-      <h1 className="home-title"><br/>
+      <Navbar /><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <h1 className="home-title">
         Collaborative Learning and Resource Sharing Platform
       </h1>
       <div className="links-container">
@@ -30,6 +34,32 @@ const Home = () => {
           <p>Access valuable resources and documents for your personal or professional growth.</p>
         </Link>
       </div>
+      <div className="posts-section">
+        <h2 className="posts-title">Recent Posts</h2>
+        <div className="posts-container">
+          <div className="post">
+            <img src={event1} alt="Event 1" className="post-image" />
+          </div>
+          <div className="post">
+            <img src={event2} alt="Event 2" className="post-image" />
+          </div>
+          <div className="post">
+            <img src={event3} alt="Event 3" className="post-image" />
+          </div>
+        </div>
+      </div>
+      <div className="news-section">
+        <h2 className="news-title">Latest News</h2>
+        <div className="news-container">
+          {newsItems.map((item, index) => (
+            <div className="news-item" key={index}>
+              <h3>{item.title}</h3>
+              <p className="news-date">{item.date}</p>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="extra-content">
         <div className="social-icons">
           <a href="https://www.instagram.com/mahesh_________gowda/" target="_blank" rel="noopener noreferrer">
@@ -44,12 +74,18 @@ const Home = () => {
         </div>
         <div className="contact-info">
           <h3>Contact Us</h3>
-          <p>Email: <a href="https://mail.google.com/mail/u/0/#sent?compose=DmwnWtMlRXMDtStrGdCBBTHxRtWspvrsGWDKMPVLRvtpWrbfqJhnZfRdzqPWDdQwPqQfWsqzcxrl">maheshbeeragownivari@gmail.com</a></p>
+          <p>Email: <a href="mailto:maheshbeeragownivari@gmail.com">maheshbeeragownivari@gmail.com</a></p>
           <p>Phone: +91 6281588540</p>
         </div>
       </div>
     </div>
   );
 };
+
+const newsItems = [
+  { title: "Orientation Programme", date: "31st July 2024", description: "Orientation Programme for First Year B.Tech Students was organized at MITS." },
+  { title: "Virtual Workshop", date: "Upcoming Date", description: "MITS will organize a virtual workshop on 'National Education Policy 2020 - Engineering Education - Curriculum' in collaboration with IIC." },
+  // Add other news items here
+];
 
 export default Home;
